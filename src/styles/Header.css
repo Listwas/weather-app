@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 2px solid rgba(31, 31, 31, 0.3);
+}
+
+.search-bar {
+    flex: 1;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    border: 2px solid rgba(31, 31, 31, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid rgba(31, 31, 31, 0.3);
+}
+
+.buttons button {
+    border: none;
+    background: rgba(252, 70, 107, 0.8);
+    color: white;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 45px;
+}
+
+.buttons button:hover {
+    background: rgba(252, 70, 107, 1);
+    transform: scale(1.05);
+}
+
+.buttons button.active {
+    background: var(--accent-color);
+    box-shadow: 0 0 10px rgba(252, 70, 107, 0.5);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}

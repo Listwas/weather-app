@@ -1,0 +1,39 @@
+:root {
+    --border-color: #1f1f1f;
+    --card-bg: #213f78;
+    --card-bg-light: #2a4d8f;
+    --text-primary: #ffffff;
+    --text-secondary: #b8d0ff;
+    --accent-color: #fc466b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #3f5efb;
+    background: radial-gradient(
+        circle at top,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-primary);
+    padding: 20px;
+}
+
+#root {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
