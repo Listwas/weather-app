@@ -18,9 +18,7 @@ export default function CityCard({ city, toggleFavorite }) {
   return (
     <div className="city-card">
       <h2>
-        <span>
-          {city.name}, {city.country}
-        </span>
+        <span>{city.name}</span>
         <button
           className="favorite"
           onClick={(e) => {
