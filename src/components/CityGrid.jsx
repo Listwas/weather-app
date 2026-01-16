@@ -1,13 +1,11 @@
-import CityCard from "./CityCard";
+import CityCard from "./CityCard.jsx";
 
-function CityGrid({ cities }) {
+export default function CityGrid({ cities, toggleFavorite }) {
   return (
     <div className="city-grid">
       {cities.map((city) => (
-        <CityCard key={city.id} city={city} />
+        <CityCard key={city.id} city={city} toggleFavorite={toggleFavorite} />
       ))}
     </div>
   );
 }
-
-export default CityGrid;
